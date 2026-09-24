@@ -1,0 +1,30 @@
+{
+  "name": "citypulse",
+  "private": true,
+  "workspaces": [
+    "backend",
+    "frontend"
+  ],
+  "scripts": {
+    "build": "npm run build -w backend && npm run build -w frontend",
+    "lint": "eslint backend/src backend/prisma frontend/src",
+    "test": "node --test tests/api.test.mjs",
+    "test:e2e": "playwright test",
+    "dev:backend": "npm run dev -w backend",
+    "dev:frontend": "npm run dev -w frontend",
+    "setup": "node scripts/setup-env.mjs"
+  },
+  "devDependencies": {
+    "eslint": "^9.22.0",
+    "typescript-eslint": "^8.26.0",
+    "@eslint/js": "^9.22.0",
+    "@playwright/test": "^1.51.0"
+  },
+  "overrides": {
+    "deepmerge-ts": "^8.0.2"
+  },
+  "engines": {
+    "node": ">=22",
+    "npm": ">=10"
+  }
+}
