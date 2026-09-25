@@ -1,0 +1,24 @@
+@startuml
+skinparam dpi 180
+skinparam defaultFontName Arial
+skinparam defaultFontSize 16
+skinparam shadowing false
+skinparam backgroundColor white
+skinparam activityBackgroundColor #EDF3F8
+skinparam activityBorderColor #324A60
+title ML-baseline — только офлайн или в тени
+start
+:Регистрация: 1 эталон на сотрудника\nОтдельная сессия, проверенная личность;
+:Детекция и выравнивание лица\nФиксированный экстрактор;
+:Галерея 5000 сотрудников\nL2-нормированные векторы;
+:Независимый запрос\nИзвестный или UNKNOWN;
+:Embedding запроса\nТочный поиск 1:N;
+if (Лучший score >= tau?) then (да)
+  :Кандидат employee_id;
+else (нет)
+  :UNKNOWN;
+endif
+:Сравнить с независимой меткой\nFPIR, FNIR, Wrong-ID, latency;
+:Только отчёт эксперимента\nНет команды турникету;
+stop
+@enduml

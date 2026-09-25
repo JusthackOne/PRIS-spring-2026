@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1760" height="980" viewBox="0 0 1760 980">
+<rect width="100%" height="100%" fill="white"/>
+<text x="65" y="71" font-family="Arial" font-size="36" font-weight="bold" text-anchor="start" fill="#172C3D">AS-IS — ручная проверка личности</text>
+<text x="65" y="116" font-family="Arial" font-size="25" font-weight="normal" text-anchor="start" fill="#172C3D">IDEF0 · A0 «Контролировать вход сотрудника» · декомпозиция</text>
+<rect x="190" y="395" width="290" height="155" fill="#EDF3F8" stroke="#324A60" stroke-width="2"/>
+<text x="335.0" y="446" font-family="Arial" font-size="23" font-weight="bold" text-anchor="middle" fill="#172C3D">Получить профиль</text>
+<text x="335.0" y="477" font-family="Arial" font-size="23" font-weight="bold" text-anchor="middle" fill="#172C3D">по пропуску</text>
+<text x="466" y="537" font-family="Arial" font-size="20" font-weight="normal" text-anchor="end" fill="#172C3D">A1</text>
+<text x="335.0" y="209" font-family="Arial" font-size="24" font-weight="normal" text-anchor="middle" fill="#172C3D">Регламент предъявления</text>
+<text x="335.0" y="241" font-family="Arial" font-size="24" font-weight="normal" text-anchor="middle" fill="#172C3D">пропуска</text>
+<polyline points="335.0,263 335.0,395" fill="none" stroke="#324A60" stroke-width="2"/>
+<polygon points="335.0,395 341.0,382.0 329.0,382.0" fill="#324A60"/>
+<text x="335.0" y="764" font-family="Arial" font-size="24" font-weight="normal" text-anchor="middle" fill="#172C3D">Сотрудник</text>
+<text x="335.0" y="796" font-family="Arial" font-size="24" font-weight="normal" text-anchor="middle" fill="#172C3D">и считыватель</text>
+<polyline points="335.0,720 335.0,550" fill="none" stroke="#324A60" stroke-width="2"/>
+<polygon points="335.0,550 329.0,563.0 341.0,563.0" fill="#324A60"/>
+<rect x="740" y="395" width="290" height="155" fill="#EDF3F8" stroke="#324A60" stroke-width="2"/>
+<text x="885.0" y="446" font-family="Arial" font-size="23" font-weight="bold" text-anchor="middle" fill="#172C3D">Сравнить лицо</text>
+<text x="885.0" y="477" font-family="Arial" font-size="23" font-weight="bold" text-anchor="middle" fill="#172C3D">и проверить права</text>
+<text x="1016" y="537" font-family="Arial" font-size="20" font-weight="normal" text-anchor="end" fill="#172C3D">A2</text>
+<text x="885.0" y="209" font-family="Arial" font-size="24" font-weight="normal" text-anchor="middle" fill="#172C3D">Фото профиля</text>
+<text x="885.0" y="241" font-family="Arial" font-size="24" font-weight="normal" text-anchor="middle" fill="#172C3D">Действующие права</text>
+<polyline points="885.0,263 885.0,395" fill="none" stroke="#324A60" stroke-width="2"/>
+<polygon points="885.0,395 891.0,382.0 879.0,382.0" fill="#324A60"/>
+<text x="885.0" y="764" font-family="Arial" font-size="24" font-weight="normal" text-anchor="middle" fill="#172C3D">Охранник</text>
+<text x="885.0" y="796" font-family="Arial" font-size="24" font-weight="normal" text-anchor="middle" fill="#172C3D">и экран СКУД</text>
+<polyline points="885.0,720 885.0,550" fill="none" stroke="#324A60" stroke-width="2"/>
+<polygon points="885.0,550 879.0,563.0 891.0,563.0" fill="#324A60"/>
+<rect x="1290" y="395" width="290" height="155" fill="#EDF3F8" stroke="#324A60" stroke-width="2"/>
+<text x="1435.0" y="446" font-family="Arial" font-size="23" font-weight="bold" text-anchor="middle" fill="#172C3D">Разрешить / отказать</text>
+<text x="1435.0" y="477" font-family="Arial" font-size="23" font-weight="bold" text-anchor="middle" fill="#172C3D">и записать проход</text>
+<text x="1566" y="537" font-family="Arial" font-size="20" font-weight="normal" text-anchor="end" fill="#172C3D">A3</text>
+<text x="1435.0" y="209" font-family="Arial" font-size="24" font-weight="normal" text-anchor="middle" fill="#172C3D">Регламент допуска</text>
+<text x="1435.0" y="241" font-family="Arial" font-size="24" font-weight="normal" text-anchor="middle" fill="#172C3D">и учёта проходов</text>
+<polyline points="1435.0,263 1435.0,395" fill="none" stroke="#324A60" stroke-width="2"/>
+<polygon points="1435.0,395 1441.0,382.0 1429.0,382.0" fill="#324A60"/>
+<text x="1435.0" y="764" font-family="Arial" font-size="24" font-weight="normal" text-anchor="middle" fill="#172C3D">Охранник</text>
+<text x="1435.0" y="796" font-family="Arial" font-size="24" font-weight="normal" text-anchor="middle" fill="#172C3D">Контроллер и журнал</text>
+<polyline points="1435.0,720 1435.0,550" fill="none" stroke="#324A60" stroke-width="2"/>
+<polygon points="1435.0,550 1429.0,563.0 1441.0,563.0" fill="#324A60"/>
+<polyline points="55,465 190,465" fill="none" stroke="#324A60" stroke-width="2"/>
+<polygon points="190,465 177.0,459.0 177.0,471.0" fill="#324A60"/>
+<text x="113" y="359" font-family="Arial" font-size="24" font-weight="normal" text-anchor="middle" fill="#172C3D">Сотрудник</text>
+<text x="113" y="391" font-family="Arial" font-size="24" font-weight="normal" text-anchor="middle" fill="#172C3D">и пропуск</text>
+<polyline points="480,465 740,465" fill="none" stroke="#324A60" stroke-width="2"/>
+<polygon points="740,465 727.0,459.0 727.0,471.0" fill="#324A60"/>
+<text x="610" y="396" font-family="Arial" font-size="23" font-weight="normal" text-anchor="middle" fill="#172C3D">Профиль</text>
+<text x="610" y="427" font-family="Arial" font-size="23" font-weight="normal" text-anchor="middle" fill="#172C3D">сотрудника</text>
+<polyline points="1030,465 1290,465" fill="none" stroke="#324A60" stroke-width="2"/>
+<polygon points="1290,465 1277.0,459.0 1277.0,471.0" fill="#324A60"/>
+<text x="1160" y="396" font-family="Arial" font-size="23" font-weight="normal" text-anchor="middle" fill="#172C3D">Результат</text>
+<text x="1160" y="427" font-family="Arial" font-size="23" font-weight="normal" text-anchor="middle" fill="#172C3D">ручной проверки</text>
+<polyline points="1580,465 1705,465" fill="none" stroke="#324A60" stroke-width="2"/>
+<polygon points="1705,465 1692.0,459.0 1692.0,471.0" fill="#324A60"/>
+<text x="1645" y="360" font-family="Arial" font-size="23" font-weight="normal" text-anchor="middle" fill="#172C3D">Результат</text>
+<text x="1645" y="391" font-family="Arial" font-size="23" font-weight="normal" text-anchor="middle" fill="#172C3D">и журнал</text>
+<text x="65" y="895" font-family="Arial" font-size="25" font-weight="normal" text-anchor="start" fill="#172C3D">Основная ручная функция: A2 — визуальное сравнение каждого сотрудника с фотографией.</text>
+<text x="65" y="961" font-family="Arial" font-size="21" font-weight="normal" text-anchor="start" fill="#596875">Вход — слева   |   Управление — сверху   |   Выход — справа   |   Механизмы — снизу</text>
+</svg>

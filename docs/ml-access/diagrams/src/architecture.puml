@@ -1,0 +1,42 @@
+@startuml
+skinparam dpi 180
+skinparam defaultFontName Arial
+skinparam defaultFontSize 16
+skinparam shadowing false
+skinparam componentStyle rectangle
+skinparam nodesep 70
+skinparam ranksep 75
+left to right direction
+title Распределённая архитектура — локальный учебный вариант
+node "КПП 1 … 10\nПовторяемый контур" as edge {
+  component "Камера\nRGB + IR/глубина" as cam
+  component "Edge runtime\nPAD, embedding, 1:N, правила" as run
+  database "Локальная галерея\nПолитика + outbox" as local
+  component "Контроллер СКУД\nи датчик прохода" as ctrl
+  component "Пост охраны\nРучной маршрут" as guard
+  cam --> run : кадры в RAM
+  run <--> local
+  run <--> ctrl : команда / ACK / проход
+  run --> guard : исключения
+}
+node "Центральный защищённый контур" as center {
+  component "API управления\nРегистрация, права, синхронизация" as api
+  database "PostgreSQL\nМетаданные и события" as db
+  storage "Объектное хранилище\nЭталоны и модели" as obj
+  component "Версии ML и оценка\nЗакрытые испытания" as ml
+  component "Мониторинг и аудит" as mon
+  api --> db
+  api --> obj
+  ml --> obj : подписанные пакеты
+  api --> mon
+}
+component "Кадры / действующая СКУД\nИсточник статуса и прав" as hr
+actor "Оператор регистрации" as op
+hr --> api : изменения и отзывы
+op --> api : эталоны и основания
+run <--> api : события и здоровье →\n← пакеты и отзывы
+legend bottom
+  TTL прав 60 с, затем MANUAL. Штатные кадры остаются на КПП.
+  Для реального внедрения в РФ требуется проверка режима ЕБС.
+endlegend
+@enduml

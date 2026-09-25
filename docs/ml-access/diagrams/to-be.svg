@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1760" height="980" viewBox="0 0 1760 980">
+<rect width="100%" height="100%" fill="white"/>
+<text x="65" y="71" font-family="Arial" font-size="36" font-weight="bold" text-anchor="start" fill="#172C3D">TO-BE — контроль входа с ML</text>
+<text x="65" y="116" font-family="Arial" font-size="25" font-weight="normal" text-anchor="start" fill="#172C3D">IDEF0 · A0 «Контролировать вход сотрудника» · декомпозиция</text>
+<rect x="150" y="395" width="270" height="155" fill="#EDF3F8" stroke="#324A60" stroke-width="2"/>
+<text x="285.0" y="446" font-family="Arial" font-size="23" font-weight="bold" text-anchor="middle" fill="#172C3D">Проверить качество</text>
+<text x="285.0" y="477" font-family="Arial" font-size="23" font-weight="bold" text-anchor="middle" fill="#172C3D">и живое</text>
+<text x="285.0" y="508" font-family="Arial" font-size="23" font-weight="bold" text-anchor="middle" fill="#172C3D">присутствие</text>
+<text x="406" y="537" font-family="Arial" font-size="20" font-weight="normal" text-anchor="end" fill="#172C3D">A1</text>
+<text x="285.0" y="208" font-family="Arial" font-size="23" font-weight="normal" text-anchor="middle" fill="#172C3D">Основание обработки</text>
+<text x="285.0" y="239" font-family="Arial" font-size="23" font-weight="normal" text-anchor="middle" fill="#172C3D">Критерии качества / PAD</text>
+<polyline points="285.0,260 285.0,395" fill="none" stroke="#324A60" stroke-width="2"/>
+<polygon points="285.0,395 291.0,382.0 279.0,382.0" fill="#324A60"/>
+<text x="285.0" y="813" font-family="Arial" font-size="23" font-weight="normal" text-anchor="middle" fill="#172C3D">Камера RGB + IR</text>
+<text x="285.0" y="844" font-family="Arial" font-size="23" font-weight="normal" text-anchor="middle" fill="#172C3D">Модуль PAD</text>
+<polyline points="285.0,774 285.0,550" fill="none" stroke="#324A60" stroke-width="2"/>
+<polygon points="285.0,550 279.0,563.0 291.0,563.0" fill="#324A60"/>
+<rect x="550" y="395" width="270" height="155" fill="#EDF3F8" stroke="#324A60" stroke-width="2"/>
+<text x="685.0" y="446" font-family="Arial" font-size="23" font-weight="bold" text-anchor="middle" fill="#172C3D">Определить</text>
+<text x="685.0" y="477" font-family="Arial" font-size="23" font-weight="bold" text-anchor="middle" fill="#172C3D">личность 1:N</text>
+<text x="806" y="537" font-family="Arial" font-size="20" font-weight="normal" text-anchor="end" fill="#172C3D">A2</text>
+<text x="685.0" y="208" font-family="Arial" font-size="23" font-weight="normal" text-anchor="middle" fill="#172C3D">Пороги tau / delta</text>
+<text x="685.0" y="239" font-family="Arial" font-size="23" font-weight="normal" text-anchor="middle" fill="#172C3D">Версия модели</text>
+<polyline points="685.0,260 685.0,395" fill="none" stroke="#324A60" stroke-width="2"/>
+<polygon points="685.0,395 691.0,382.0 679.0,382.0" fill="#324A60"/>
+<text x="685.0" y="813" font-family="Arial" font-size="23" font-weight="normal" text-anchor="middle" fill="#172C3D">Edge-узел</text>
+<text x="685.0" y="844" font-family="Arial" font-size="23" font-weight="normal" text-anchor="middle" fill="#172C3D">Галерея и модель</text>
+<polyline points="685.0,774 685.0,550" fill="none" stroke="#324A60" stroke-width="2"/>
+<polygon points="685.0,550 679.0,563.0 691.0,563.0" fill="#324A60"/>
+<rect x="950" y="395" width="270" height="155" fill="#EDF3F8" stroke="#324A60" stroke-width="2"/>
+<text x="1085.0" y="446" font-family="Arial" font-size="23" font-weight="bold" text-anchor="middle" fill="#172C3D">Проверить</text>
+<text x="1085.0" y="477" font-family="Arial" font-size="23" font-weight="bold" text-anchor="middle" fill="#172C3D">права доступа</text>
+<text x="1206" y="537" font-family="Arial" font-size="20" font-weight="normal" text-anchor="end" fill="#172C3D">A3</text>
+<text x="1085.0" y="208" font-family="Arial" font-size="23" font-weight="normal" text-anchor="middle" fill="#172C3D">Свежие права</text>
+<text x="1085.0" y="239" font-family="Arial" font-size="23" font-weight="normal" text-anchor="middle" fill="#172C3D">и расписание</text>
+<polyline points="1085.0,260 1085.0,395" fill="none" stroke="#324A60" stroke-width="2"/>
+<polygon points="1085.0,395 1091.0,382.0 1079.0,382.0" fill="#324A60"/>
+<text x="1085.0" y="813" font-family="Arial" font-size="23" font-weight="normal" text-anchor="middle" fill="#172C3D">Edge-узел</text>
+<text x="1085.0" y="844" font-family="Arial" font-size="23" font-weight="normal" text-anchor="middle" fill="#172C3D">Локальная политика</text>
+<polyline points="1085.0,774 1085.0,550" fill="none" stroke="#324A60" stroke-width="2"/>
+<polygon points="1085.0,550 1079.0,563.0 1091.0,563.0" fill="#324A60"/>
+<rect x="1350" y="395" width="270" height="155" fill="#EDF3F8" stroke="#324A60" stroke-width="2"/>
+<text x="1485.0" y="446" font-family="Arial" font-size="23" font-weight="bold" text-anchor="middle" fill="#172C3D">Исполнить решение</text>
+<text x="1485.0" y="477" font-family="Arial" font-size="23" font-weight="bold" text-anchor="middle" fill="#172C3D">и записать</text>
+<text x="1485.0" y="508" font-family="Arial" font-size="23" font-weight="bold" text-anchor="middle" fill="#172C3D">событие</text>
+<text x="1606" y="537" font-family="Arial" font-size="20" font-weight="normal" text-anchor="end" fill="#172C3D">A4</text>
+<text x="1485.0" y="208" font-family="Arial" font-size="23" font-weight="normal" text-anchor="middle" fill="#172C3D">Регламент СКУД</text>
+<text x="1485.0" y="239" font-family="Arial" font-size="23" font-weight="normal" text-anchor="middle" fill="#172C3D">и ручного допуска</text>
+<polyline points="1485.0,260 1485.0,395" fill="none" stroke="#324A60" stroke-width="2"/>
+<polygon points="1485.0,395 1491.0,382.0 1479.0,382.0" fill="#324A60"/>
+<text x="1485.0" y="813" font-family="Arial" font-size="23" font-weight="normal" text-anchor="middle" fill="#172C3D">Контроллер СКУД</text>
+<text x="1485.0" y="844" font-family="Arial" font-size="23" font-weight="normal" text-anchor="middle" fill="#172C3D">Охранник и журнал</text>
+<polyline points="1485.0,774 1485.0,550" fill="none" stroke="#324A60" stroke-width="2"/>
+<polygon points="1485.0,550 1479.0,563.0 1491.0,563.0" fill="#324A60"/>
+<text x="65" y="325" font-family="Arial" font-size="23" font-weight="normal" text-anchor="start" fill="#172C3D">Сотрудник</text>
+<text x="65" y="356" font-family="Arial" font-size="23" font-weight="normal" text-anchor="start" fill="#172C3D">и кадры</text>
+<polyline points="65,365 110,365 110,465 150,465" fill="none" stroke="#324A60" stroke-width="2"/>
+<polygon points="150,465 137.0,459.0 137.0,471.0" fill="#324A60"/>
+<polyline points="420,465 550,465" fill="none" stroke="#324A60" stroke-width="2"/>
+<polygon points="550,465 537.0,459.0 537.0,471.0" fill="#324A60"/>
+<text x="485" y="411" font-family="Arial" font-size="19" font-weight="normal" text-anchor="middle" fill="#172C3D">Пригодное</text>
+<text x="485" y="438" font-family="Arial" font-size="19" font-weight="normal" text-anchor="middle" fill="#172C3D">лицо</text>
+<polyline points="820,465 950,465" fill="none" stroke="#324A60" stroke-width="2"/>
+<polygon points="950,465 937.0,459.0 937.0,471.0" fill="#324A60"/>
+<text x="885" y="411" font-family="Arial" font-size="19" font-weight="normal" text-anchor="middle" fill="#172C3D">Кандидат</text>
+<text x="885" y="438" font-family="Arial" font-size="19" font-weight="normal" text-anchor="middle" fill="#172C3D">employee_id</text>
+<polyline points="1220,465 1350,465" fill="none" stroke="#324A60" stroke-width="2"/>
+<polygon points="1350,465 1337.0,459.0 1337.0,471.0" fill="#324A60"/>
+<text x="1285" y="411" font-family="Arial" font-size="19" font-weight="normal" text-anchor="middle" fill="#172C3D">Решение</text>
+<text x="1285" y="438" font-family="Arial" font-size="19" font-weight="normal" text-anchor="middle" fill="#172C3D">о допуске</text>
+<polyline points="1620,465 1700,465" fill="none" stroke="#324A60" stroke-width="2"/>
+<polygon points="1700,465 1687.0,459.0 1687.0,471.0" fill="#324A60"/>
+<text x="1660" y="351" font-family="Arial" font-size="21" font-weight="normal" text-anchor="middle" fill="#172C3D">Результат</text>
+<text x="1660" y="380" font-family="Arial" font-size="21" font-weight="normal" text-anchor="middle" fill="#172C3D">и журнал</text>
+<polyline points="420,520 448,520 448,645" fill="none" stroke="#324A60" stroke-width="2"/>
+<polyline points="820,520 848,520 848,645" fill="none" stroke="#324A60" stroke-width="2"/>
+<polyline points="1220,520 1248,520 1248,645" fill="none" stroke="#324A60" stroke-width="2"/>
+<polyline points="448,645 1305,645 1305,515 1350,515" fill="none" stroke="#324A60" stroke-width="2"/>
+<polygon points="1350,515 1337.0,509.0 1337.0,521.0" fill="#324A60"/>
+<text x="880" y="697" font-family="Arial" font-size="23" font-weight="normal" text-anchor="middle" fill="#172C3D">Исключения</text>
+<text x="880" y="728" font-family="Arial" font-size="23" font-weight="normal" text-anchor="middle" fill="#172C3D">к A4</text>
+<text x="65" y="918" font-family="Arial" font-size="24" font-weight="normal" text-anchor="start" fill="#172C3D">Изменение: охранник обрабатывает исключения; штатные проверки выполняют ML и явные правила.</text>
+<text x="65" y="961" font-family="Arial" font-size="21" font-weight="normal" text-anchor="start" fill="#596875">Вход — слева   |   Управление — сверху   |   Выход — справа   |   Механизмы — снизу</text>
+</svg>

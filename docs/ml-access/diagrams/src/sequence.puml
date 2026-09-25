@@ -1,0 +1,50 @@
+@startuml
+skinparam dpi 180
+skinparam defaultFontName Arial
+skinparam defaultFontSize 18
+skinparam shadowing false
+skinparam sequenceMessageAlign center
+skinparam maxMessageSize 240
+hide footbox
+title UML последовательности — одна попытка прохода
+participant "Камера" as cam
+participant "Edge runtime" as edge
+database "Локальные\nданные" as db
+participant "Контроллер\nСКУД" as gate
+actor "Охрана" as guard
+participant "Центр" as center
+cam -> edge : RGB + IR, session_id
+edge -> edge : Качество, PAD, embedding
+edge -> db : 1:N и проверка свежих прав
+db --> edge : Кандидаты, права, версии
+alt Сбой, низкое качество, PAD или нет надёжного кандидата
+  edge -> guard : MANUAL и причина
+else Известный сотрудник без действующих прав
+  edge -> db : DENY / RIGHTS_DENIED
+else Личность и права подтверждены
+  edge -> db : Записать ALLOW + attempt_id
+  note over edge,db
+  Недоступен аудит → MANUAL без открытия.
+  В пилоте также нужно подтверждение охраны.
+  end note
+  edge -> gate : openOnce(id, nonce, expires_at)
+  alt Исполнение подтверждено
+    gate --> edge : ACK
+    edge -> db : COMMAND_ACK
+    opt Физический проход зарегистрирован датчиком
+      gate -> edge : passage_event
+      edge -> db : PASSAGE
+    end
+  else Timeout или ошибка
+    edge -> db : COMMAND_UNKNOWN
+    edge -> guard : Проверка без повторного открытия
+  end
+end
+edge -> db : Сохранить события всех исходов
+edge -> center : Batch из outbox, с повторами
+center --> edge : ACK уникальных event_id
+note over edge,center
+При отказе диска восстановление доставки не открывает турникет.
+Старые права и отзывы не восстанавливаются откатом модели.
+end note
+@enduml

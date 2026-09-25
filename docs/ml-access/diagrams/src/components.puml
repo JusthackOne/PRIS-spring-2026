@@ -1,0 +1,56 @@
+@startuml
+skinparam dpi 180
+skinparam defaultFontName Arial
+skinparam defaultFontSize 16
+skinparam shadowing false
+skinparam componentStyle uml2
+skinparam nodesep 65
+skinparam ranksep 75
+title UML компонентов — зависимости программных модулей
+package "Узел КПП" {
+  [CaptureService] as cap
+  [QualityAndPAD] as pad
+  [LocalIdentityProvider] as idp
+  [DecisionService] as dec
+  [PolicyStore] as pol
+  [GalleryStore] as gal
+  [AuditOutbox] as aud
+  [GateAdapter] as gate
+  [SyncAgent] as sync
+  interface "IIdentityProvider" as ii
+  interface "IGateControl" as ig
+  cap --> pad : кадры
+  pad --> dec : качество и PAD
+  dec ..> ii : identify()
+  idp -- ii
+  idp --> gal : searchExact()
+  dec --> pol : checkRights()
+  dec --> aud : appendBeforeOpen()
+  dec ..> ig : openOnce()
+  gate -- ig
+  sync --> gal : applySnapshot()
+  sync --> pol : applyRevocation()
+  sync --> aud : flushBatch()
+}
+package "Центральная платформа" {
+  [EnrollmentService] as enr
+  [PolicyService] as ps
+  [ModelRegistry] as mr
+  [SyncAPI] as sa
+  [AuditAPI] as aa
+  [AdminWeb] as ui
+  ui --> enr
+  ui --> ps
+  enr --> mr : совместимость
+  sa --> enr : gallery
+  sa --> ps : policy
+  sa --> mr : model
+}
+sync ..> sa : HTTPS / mTLS
+sync ..> aa : идемпотентный batch
+note bottom of ii
+Адаптер разрешённого внешнего решения
+может заменить LocalIdentityProvider
+после пересмотра контрактов и требований.
+end note
+@enduml

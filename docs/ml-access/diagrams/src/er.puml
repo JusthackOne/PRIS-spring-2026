@@ -1,0 +1,108 @@
+@startuml
+skinparam dpi 180
+hide circle
+skinparam defaultFontName Arial
+skinparam defaultFontSize 15
+skinparam shadowing false
+skinparam linetype ortho
+skinparam entityBackgroundColor #F4F7FA
+skinparam entityBorderColor #324A60
+skinparam nodesep 45
+skinparam ranksep 50
+title ER — центральная модель метаданных
+entity "Employee\nСотрудник" as E {
+ * employee_id : uuid <<PK>>
+ --
+ * personnel_no : text <<UQ>>
+ * status : enum
+ * updated_at : timestamp
+}
+entity "Consent\nОснование обработки" as C {
+ * consent_id : uuid <<PK>>
+ --
+ * employee_id : uuid <<FK>>
+ * legal_basis_ref : text
+ * valid_from : timestamp
+ valid_to : timestamp
+ revoked_at : timestamp
+}
+entity "Template\nБиометрический шаблон" as T {
+ * template_id : uuid <<PK>>
+ --
+ * employee_id : uuid <<FK>>
+ * consent_id : uuid <<FK>>
+ * model_id : uuid <<FK>>
+ * object_ref : text
+ * status : enum
+}
+entity "ModelVersion\nВерсия модели" as M {
+ * model_id : uuid <<PK>>
+ --
+ * version : text <<UQ>>
+ * artifact_hash : text
+ * thresholds_ref : text
+ * license_ref : text
+}
+entity "Checkpoint\nПроходная" as K {
+ * gate_id : uuid <<PK>>
+ --
+ * name : text
+ * controller_ref : text
+}
+entity "AccessGrant\nПраво прохода" as G {
+ * grant_id : uuid <<PK>>
+ --
+ * employee_id : uuid <<FK>>
+ * gate_id : uuid <<FK>>
+ * valid_from : timestamp
+ * valid_to : timestamp
+ * schedule_ref : text
+ * status : enum
+}
+entity "Snapshot\nПакет версии" as S {
+ * snapshot_id : uuid <<PK>>
+ --
+ * model_id : uuid <<FK>>
+ * gallery_version : text
+ * policy_version : text
+ * manifest_hash : text
+}
+entity "EdgeState\nСостояние узла КПП" as D {
+ * gate_id : uuid <<PK,FK>>
+ --
+ snapshot_id : uuid <<FK>>
+ * node_id : uuid <<UQ>>
+ * last_confirmed_at : timestamp
+ * revoked_seq : bigint
+}
+entity "AccessEvent\nСобытие попытки или прохода" as A {
+ * event_id : uuid <<PK>>
+ --
+ * attempt_id : uuid
+ * gate_id : uuid <<FK>>
+ employee_id : uuid <<FK>>
+ snapshot_id : uuid <<FK>>
+ * event_type : enum
+ decision : enum
+ reason : text
+ * occurred_at : timestamp
+ * node_id, boot_id, local_seq <<UQ>>
+}
+E ||--o{ C
+E ||--o{ T
+C ||--o{ T
+M ||--o{ T
+E ||--o{ G
+K ||--o{ G
+M ||--o{ S
+K ||--o| D
+S |o--o{ D
+K ||--o{ A
+E |o--o{ A
+S |o--o{ A
+note bottom of T
+Метаданные в PostgreSQL.
+Векторы и фото — в защищённом хранилище.
+Не более 3 активных шаблонов сотрудника.
+end note
+@enduml

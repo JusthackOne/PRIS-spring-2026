@@ -1,0 +1,51 @@
+@startuml
+skinparam dpi 180
+skinparam defaultFontName Arial
+skinparam defaultFontSize 16
+skinparam shadowing false
+skinparam backgroundColor white
+skinparam activityBackgroundColor #EDF3F8
+skinparam activityBorderColor #324A60
+title MVP — идентификация и решение о допуске
+start
+:Сессия сотрудника\nRGB + IR/глубина;
+if (Одно лицо и качество допустимы?) then (да)
+else (нет)
+  :Одна повторная съёмка;
+  if (Повторный кадр пригоден?) then (да)
+  else (нет)
+    :MANUAL / LOW_QUALITY\nЗаписать событие;
+    stop
+  endif
+endif
+if (PAD пройден?) then (да)
+else (нет)
+  :MANUAL / PAD_FAILED\nЗапись события, проверка охраной;
+  stop
+endif
+:Embedding и точный поиск\nДо 3 шаблонов на человека\nTop-2 по разным employee_id;
+if (score1 >= tau и отрыв >= delta?) then (да)
+else (нет)
+  :MANUAL / NO_MATCH или AMBIGUOUS\nЗаписать событие;
+  stop
+endif
+if (Политика свежая и аудит доступен?) then (да)
+else (нет)
+  :MANUAL / STALE_POLICY или DEVICE_ERROR\nЗапись при доступном журнале;
+  stop
+endif
+if (Сотрудник активен и права действуют?) then (да)
+else (нет)
+  :DENY / RIGHTS_DENIED\nЗаписать событие;
+  stop
+endif
+:Записать решение ALLOW\nВ пилоте получить подтверждение охраны;
+:Одноразовая команда СКУД\nСрок действия + attempt_id;
+if (Контроллер подтвердил исполнение?) then (да)
+  :Сохранить ACK\nФакт прохода — отдельный датчик;
+else (нет)
+  :MANUAL / DEVICE_ERROR\nВыяснить состояние без повторного открытия;
+endif
+:Доставить события в центральный журнал;
+stop
+@enduml
