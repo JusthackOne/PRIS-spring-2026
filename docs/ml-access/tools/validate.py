@@ -6,7 +6,7 @@ from docx import Document
 ROOT=Path(__file__).resolve().parents[3]
 BASE=ROOT/'docs/ml-access'
 fail=[]
-for md in [ROOT/'REPORT_4.md',*BASE.rglob('*.md')]:
+for md in [ROOT/'README.md',*BASE.rglob('*.md')]:
     if 'sources' in md.parts:continue
     for target in re.findall(r'!?\[[^\]]*\]\(([^)]+)\)',md.read_text(encoding='utf-8')):
         if target.startswith(('http:','https:','#')):continue

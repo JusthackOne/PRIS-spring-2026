@@ -1,8 +1,14 @@
-node_modules/
-dist/
-.env
-*.log
-test-results/
-playwright-report/
-.local/
-*.tsbuildinfo
+# Ветка содержит только комплект проектного задания по кейсу №2.
+# Остальные локальные материалы сохраняются вне состава этой ветки.
+/*
+!/.gitignore
+!/README.md
+!/REPORT_4.docx
+!/REPORT_4.pdf
+!/docs/
+/docs/*
+!/docs/ml-access/
+
+__pycache__/
+*.pyc
+~$*
